@@ -2,12 +2,6 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
-    app.kubernetes.io/name: external-dns
-    app.kubernetes.io/instance:	external-dns-app
-    app.kubernetes.io/version: v0.7.3
-    app.kubernetes.io/component: external-dns-controller
-    app.kubernetes.io/part-of: external-dns
-    app.kubernetes.io/managed-by:	kustomize
     app: external-dns
   name: external-dns
 spec:
