@@ -10,7 +10,7 @@ labels:
   app.kubernetes.io/version: v0.7.3
   app.kubernetes.io/component: public-dns-controller
   app.kubernetes.io/part-of: external-dns
-  app.kubernetes.io/managed-by:	kustomize
+  app.kubernetes.io/managed-by: kustomize
 fieldSpecs:
 - path: metadata/labels
   create: true
