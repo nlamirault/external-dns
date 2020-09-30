@@ -1,0 +1,19 @@
+# Copyright (C) 2019 Skale-5 <ops@skale-5.com>
+---
+apiVersion: builtin
+kind: LabelTransformer
+metadata:
+  name: labelTransformer
+labels:
+  app.kubernetes.io/name: external-dns
+  app.kubernetes.io/instance:	external-dns-app
+  app.kubernetes.io/version: v0.7.3
+  app.kubernetes.io/component: public-dns-controller
+  app.kubernetes.io/part-of: external-dns
+  app.kubernetes.io/managed-by:	kustomize
+fieldSpecs:
+- path: metadata/labels
+  create: true
+- kind: Deployment
+  path: spec/template/metadata/labels
+  create: true
